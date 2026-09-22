@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - Analyzer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 68.4%;
+      }
+      body {
+        background-color: rgba(39, 35, 35, 0.76);
+        height: 100%;
+        width: 100%;
+      }
+      .Container {
+        padding: 20px;
+        margin: 2rem auto;
+        background-color: white;
+        border: 1px solid black;
+        height: 500px;
+        width: 80%;
+      }
+      .searchUser {
+        padding: 10px 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 70% 25%;
+        gap: 10px;
+      }
+      input {
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 4px;
+      }
+      button {
+        padding: 10px;
+        border: 1px solid blue;
+        background-color: blue;
+        color: white;
+        border-radius: 4px;
+      }
+      .loader {
+        display: none;
+      }
+      button:hover {
+        color: blue;
+        border-color: blue;
+        background-color: transparent;
+      }
+      h1 {
+        font-size: 18px;
+        color: rgb(88, 85, 85);
+      }
+      span {
+        color: red;
+      }
+      .userDetails1 {
+        /* border: 1px solid black; */
+        height: 250px;
+      }
+      /* .repoDetails1 {
+        height: 100px;
+      } */
+      .createDiv {
+        margin-top: 5px;
+      }
+      .createDiv p {
+        color: black;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Container">
+      <div class="searchUser">
+        <input
+          id="usernameInput"
+          type="text"
+          placeholder="Enter Your GitHub UserName"
+          required
+        />
+        <button onclick="getUsername()">Search</button>
+      </div>
+      <hr />
+      <div class="Details">
+        <div class="userDetails1">
+          <h1>Developer Report</h1>
+          <div class="userDetails"></div>
+          <div class="loader">Loading.....</div>
+        </div>
+        <div class="repoDetails1">
+          <h1>Language Distribution</h1>
+          <div class="repoDetails"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
